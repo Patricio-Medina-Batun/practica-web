@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+   
+</head>
+<body>
+    <header class="main-header">
+        <img src="https://preview.redd.it/heres-my-collection-of-personal-the-crew-2-screenshots-v0-f1gs5z20ahz81.jpg?width=1080&crop=smart&auto=webp&s=42ff9c67a30b3c895d3f51084928eeb88acdca29" alt="" id="banner">
+        <h1>Bienvenidos viajeros a mi página web</h1>
+        <button onclick="cambiarImagen()">Inicio</button>
+    </header>
+
+    <section class="secciones">
+        <h2>Rutas de turismo</h2>
+        <div class="secciones-texto">
+            <div class="texto">
+                <h3>¿Qué hacemos?</h3>
+                <p>Recorreremos los sitios más aptos para rutas desafiantes y para amantes de los deportes automotor, o siemplemente para tomar una foto de las que pocos se atreven a tener.</p>
+            </div>
+
+            <div class="texto">
+                <h3>¿Qué tipos de paisajes encontraremos?</h3>
+                <p>Nos aventuraremos desde el desierto del mojave a las helidas montañas de St. Julian Peak</p>
+             </div>
+
+            <div class="texto">
+                <h3>¿Para quienes somos?</h3>
+                <p>Para viajeros que no se conforman en ir solo en linea recta.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Desarrollado por Patricio Medina Batún</p>
+    </footer>
+    <script>
+    let contador = 0;
+
+    const imagenes = [
+    "https://preview.redd.it/heres-my-collection-of-personal-the-crew-2-screenshots-v0-f1gs5z20ahz81.jpg?width=1080&crop=smart&auto=webp&s=42ff9c67a30b3c895d3f51084928eeb88acdca29",  
+    "https://wallpaper.forfun.com/fetch/08/08d4da43bd227912854291ed41f36169.jpeg",
+    "https://w0.peakpx.com/wallpaper/262/727/HD-wallpaper-the-crew-2-ford-mustang-rear-lights-the-crew-2-the-crew-games-pc-games-xbox-games-ps-games-ford-mustang.jpg",
+    "https://wallpaper.forfun.com/fetch/30/30d704fcd708d013c5a5007391eb9fff.jpeg",
+    "https://wallpaper.forfun.com/fetch/87/874dce99d7e1e6a5c4d906670cc4a8bb.jpeg",
+    "https://wallpaper.forfun.com/fetch/55/55109c19d0ad72dc68058e7f8d94632f.jpeg",
+    "https://cdna.artstation.com/p/assets/images/images/065/006/630/large/lea-lescuyer-christmas-04.jpg?1689265894",
+    "https://cdna.artstation.com/p/assets/images/images/013/365/026/large/julien-debono-pic-20180807-140543-3840x2160-copy.jpg?1539258141"
+    
+    ];
+
+    function cambiarImagen() {
+    const imagen = document.getElementById("banner");
+    imagen.style.opacity = 0;
+
+    // Avanza al siguiente índice, reinicia si llega al final
+    contador = (contador + 1) % imagenes.length;
+
+    setTimeout(() => {
+        imagen.src = imagenes[contador];
+        imagen.style.opacity = 1;
+    }, 300);
+    }
+    </script>
+
+</body>
+
+</html>
